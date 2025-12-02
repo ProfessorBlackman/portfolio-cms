@@ -1,0 +1,8 @@
+{
+  "version": "v1",
+  "packages": {
+    "sanity-plugin-csv-table-input": {
+      "signature": "4d87a608ffce6efd92fcec17f75f87f6"
+    }
+  }
+}
