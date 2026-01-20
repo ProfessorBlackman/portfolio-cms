@@ -12,6 +12,12 @@ export default defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
+            name: 'profession',
+            title: 'Profession',
+            type: 'string',
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
             name: 'headline',
             title: 'Headline',
             type: 'string',
@@ -33,6 +39,13 @@ export default defineType({
             ]
         }),
         defineField({
+            name: 'subtitle',
+            title: 'Subtitle',
+            type: 'text',
+            rows: 3,
+            description: 'Used in the Hero section',
+        }),
+        defineField({
             name: 'shortBio',
             title: 'Short Bio',
             type: 'text',
@@ -41,9 +54,38 @@ export default defineType({
         }),
         defineField({
             name: 'fullBio',
-            title: 'Full Bio',
-            type: 'text',
+            type: 'array',
+            title: 'Detailed Bio',
             description: 'Used in the About section',
+            of: [{type: 'block'}]
+        }),
+        defineField({
+            name: 'focusAreas',
+            type: 'array',
+            title: 'Focus Areas',
+            description: 'Used in the About section',
+            of: [{type: 'block'}]
+        }),
+        defineField({
+            name: 'thoughtProcess',
+            type: 'array',
+            title: 'Thought Process',
+            description: 'Used in the About section',
+            of: [{type: 'block'}]
+        }),
+        defineField({
+            name: 'values',
+            title: 'Values',
+            type: 'text',
+            rows: 3,
+            description: 'Used in the Hero section',
+        }),
+        defineField({
+            name: 'cta',
+            type: 'array',
+            title: 'Call to Action',
+            description: 'Used in the About section',
+            of: [{type: 'block'}]
         }),
         defineField({
             name: 'email',

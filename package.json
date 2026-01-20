@@ -18,11 +18,11 @@
     "@sanity/code-input": "^6.0.3",
     "@sanity/icons": "^3.7.4",
     "@sanity/table": "^2.0.0",
-    "@sanity/vision": "^4.20.3",
+    "@sanity/vision": "^4.22.0",
     "easymde": "2",
     "react": "^19.1",
     "react-dom": "^19.1",
-    "sanity": "^4.20.3",
+    "sanity": "^4.22.0",
     "sanity-plugin-csv-table-input": "^1.0.0",
     "sanity-plugin-markdown": "^6.0.0",
     "sanity-plugin-mermaid-input": "^1.0.1",
@@ -40,5 +40,6 @@
     "printWidth": 100,
     "bracketSpacing": false,
     "singleQuote": true
-  }
+  },
+  "packageManager": "pnpm@10.6.3+sha1.43e3aa4a371d889dfb0ffe7a9b5d4ca0668ccaa9"
 }
