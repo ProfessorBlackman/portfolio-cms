@@ -18,6 +18,54 @@ export default defineType({
             rows: 3,
         }),
         defineField({
+            name: 'details',
+            type: 'array',
+            of: [
+                { type: 'block' },
+                {
+                    name: 'csvTable',
+                    title: 'CSV Table',
+                    type: 'csvTable',
+                    description: 'For CSV table data',
+                },
+                {
+                    type: "code",
+                    name: "code",
+                    title: "Code",
+                    options: {
+                        withFilename: true,
+                        language: "javascript",
+                        languageAlternatives: [
+                            { value: "javascript", title: "JavaScript" },
+                            { value: "python", title: "Python" },
+                            { value: "java", title: "Java" },
+                            { value: "dart", title: "Dart" },
+                            { value: "typescript", title: "TypeScript" },
+                            { value: "c#", title: "C#" },
+                            { value: "go", title: "Go" },
+                            { value: "rust", title: "Rust" },
+                            { value: "swift", title: "Swift" },
+                            { value: "kotlin", title: "Kotlin" },
+                            { value: "scala", title: "Scala" },
+                            { value: "elixir", title: "Elixir" },
+                            { value: "erlang", title: "Erlang" },
+                            { value: "sql", title: "SQL" },
+                            { value: "html", title: "HTML" },
+                            { value: "css", title: "CSS" },
+                            { value: "shell", title: "Shell" },
+                            { value: "json", title: "JSON" },
+                            { value: "xml", title: "XML" },
+                            { value: "yaml", title: "YAML" },
+                            { value: "markdown", title: "Markdown" },
+                            { value: "mermaid", title: "Mermaid" },
+                        ]
+                    }
+                },
+
+                { type: "image" },
+            ],
+        }),
+        defineField({
             name: 'image',
             title: 'Project Image',
             type: 'image',
@@ -102,6 +150,52 @@ export default defineType({
             name: 'architecture',
             title: 'Architecture Description',
             type: 'text',
+        }),
+        defineField({
+            name: 'category',
+            title: 'Category',
+            type: 'string',
+        }),
+        defineField({
+            name: 'media',
+            title: 'Media',
+            type: 'array',
+            of: [
+                {
+                    type: 'object',
+                    name: 'projectMedia',
+                    fields: [
+                        {
+                            name: 'type',
+                            title: 'Type',
+                            type: 'string',
+                            options: {
+                                list: [
+                                    { title: 'Image', value: 'image' },
+                                    { title: 'Video', value: 'video' },
+                                ],
+                            },
+                        },
+                        {
+                            name: 'image',
+                            title: 'Image',
+                            type: 'image',
+                            hidden: ({ parent }: any) => parent?.type !== 'image',
+                        },
+                        {
+                            name: 'videoUrl',
+                            title: 'Video URL',
+                            type: 'url',
+                            hidden: ({ parent }: any) => parent?.type !== 'video',
+                        },
+                        {
+                            name: 'caption',
+                            title: 'Caption',
+                            type: 'string',
+                        },
+                    ],
+                },
+            ],
         }),
     ],
 })

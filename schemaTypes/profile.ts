@@ -60,18 +60,26 @@ export default defineType({
             of: [{type: 'block'}]
         }),
         defineField({
-            name: 'focusAreas',
-            type: 'array',
-            title: 'Focus Areas',
-            description: 'Used in the About section',
-            of: [{type: 'block'}]
-        }),
+              name: "focusAreas",
+              title: "Focus Areas",
+              type: "array",
+              description: 'Used in the About section',
+              of: [
+                {
+                  type: "object",
+                  fields: [
+                    { name: "title", type: "string", title: "Title" },
+                    { name: "desc", type: "string", title: "Description" },
+                  ],
+                },
+              ],
+            }),
         defineField({
             name: 'thoughtProcess',
             type: 'array',
             title: 'Thought Process',
             description: 'Used in the About section',
-            of: [{type: 'block'}]
+            of: [{type: 'string'}]
         }),
         defineField({
             name: 'values',

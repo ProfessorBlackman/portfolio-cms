@@ -6,8 +6,8 @@ export default defineType({
     type: 'document',
     fields: [
         defineField({
-            name: 'title',
-            title: 'Job Title',
+            name: 'role',
+            title: 'Job Role',
             type: 'string',
             validation: (Rule) => Rule.required(),
         }),
@@ -46,10 +46,15 @@ export default defineType({
             type: 'array',
             of: [{ type: 'string' }],
         }),
+        defineField({
+            name: 'description',
+            title: 'Description',
+            type: 'text',
+        }),
     ],
     preview: {
         select: {
-            title: 'title',
+            title: 'role',
             subtitle: 'company',
         },
     },

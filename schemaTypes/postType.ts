@@ -96,12 +96,6 @@ export default defineType({
       title: 'Duration',
     }),
     defineField({
-      name: 'dateCreated',
-      type: 'datetime',
-      title: 'Date Created',
-      initialValue: () => new Date().toISOString(),
-    }),
-    defineField({
       name: "references",
       title: "References / Citations",
       type: "array",

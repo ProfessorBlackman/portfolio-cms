@@ -44,6 +44,12 @@ export default defineType({
             },
             initialValue: 'education',
         }),
+        
+        defineField({
+            name: 'certificateUrl',
+            title: 'Certificate URL',
+            type: 'url',
+        }),
         defineField({
             name: 'description',
             title: 'Description',

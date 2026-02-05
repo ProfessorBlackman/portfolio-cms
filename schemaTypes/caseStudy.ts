@@ -633,6 +633,12 @@ export default defineType({
             type: "text",
             rows: 3,
         }),
+        defineField({
+            name: 'tags',
+            type: 'array',
+            title: 'Tags',
+            of: [{ type: 'string' }],
+        }),
     ],
 
     preview: {
