@@ -5,8 +5,9 @@ import education from './education'
 import experience from './experience'
 import skill from './skill'
 import profile from './profile'
+import labItem from './labItem'
 export const schemaTypes = [
     post, caseStudy, project, 
     education, experience, 
-    skill, profile
+    skill, profile, labItem
 ]
